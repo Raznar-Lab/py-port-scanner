@@ -1,0 +1,29 @@
+# List of IP ranges to scan (CIDR notation)
+ip_ranges:
+  - "192.168.1.0/28"    # Example subnet 1
+  - "10.0.0.0/29"       # Example subnet 2
+  - "172.16.5.0/29"     # Example subnet 3
+
+# Gateways (whitelisted IPs, will not be scanned)
+gateways:
+  - "192.168.1.1"       # Gateway for 192.168.1.0/28
+  - "10.0.0.1"          # Gateway for 10.0.0.0/29
+  - "172.16.5.1"        # Gateway for 172.16.5.0/29
+
+# TCP ports to check
+tcp_ports:
+  - 22                  # SSH
+  - 3389                # RDP
+
+# UDP ports to check
+udp_ports:
+  - 53                  # DNS
+
+# Timeout for ping/port checks in seconds
+timeout: 10
+
+# Number of ping requests to send per host
+ping_count: 1
+
+# Number of concurrent threads for scanning
+threads: 50
